@@ -221,4 +221,30 @@ li:not(:last-child) {
   padding: 50px 40px;
   width: 30%;
   font-size: 20px;
+  transition: all 0.5s ease-in-out;
+  transform: rotateY(0);
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.3);
+  scale: 1.05;
+}
+
+.back:hover {
+  box-shadow: -5px 5px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.back {
+  background: rgb(233, 3, 145);
+  transform: rotateY(180deg);
+}
+
+.card p {
+  transform: rotateY(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.back .back-text {
+  transform: rotateY(-180deg);
 }

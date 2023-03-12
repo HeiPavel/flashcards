@@ -35,6 +35,10 @@ export default function NewQuizForm() {
     navigate(ROUTES.quizzesRoute());
   };
 
+  /*const stringReverse = string => {
+    return string.split('').reverse().join('');
+  }*/
+
   const addCardInputs = (e) => {
     e.preventDefault();
     setCards(cards.concat({ front: "", back: "" }));
@@ -87,8 +91,7 @@ export default function NewQuizForm() {
             <input
               id={`card-back-${index}`}
               value={cards[index].back}
-              onChange={(e) =>
-                updateCardState(index, "back", e.currentTarget.value)
+              onChange={(e) => updateCardState(index, "back", e.currentTarget.value)
               }
               placeholder="Back"
             />
