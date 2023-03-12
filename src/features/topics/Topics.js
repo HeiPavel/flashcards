@@ -7,7 +7,7 @@ import {selectTopics} from './topicsSlice.js';
 
 export default function Topics() {
   const topics = useSelector(selectTopics); // replace this with a call to your selector to select all the topics in state
-  console.log(topics);
+  //console.log(topics);
 
   return (
     <section className="center">
