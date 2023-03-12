@@ -208,11 +208,17 @@ li:not(:last-child) {
   padding: 0;
 }
 
+.cards-list li {
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   background: #b736ff;
   border-radius: 4px;
   border: none;
   color: white;
-  padding: 73px 44px;
-  width: 100%;
+  padding: 50px 40px;
+  width: 30%;
+  font-size: 20px;
 }
