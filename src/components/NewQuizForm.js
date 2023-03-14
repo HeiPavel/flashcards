@@ -22,22 +22,18 @@ export default function NewQuizForm() {
     }
 
     const cardIds = [];
-    // create the new cards here and add each card's id to cardIds
+    // Creating new card and add it's id to cardIds
     cards.forEach(card => {
       const id = uuidv4();
       cardIds.push(id);
       dispatch(addCard({...card, id: id}));
     });
-    // create the new quiz here
+    // Creating new quiz
     const twoActions = addQuizAndQuizIdToTopicId({id: uuidv4(), name: name, topicId: topicId, cardIds: cardIds});
     twoActions(dispatch);
 
     navigate(ROUTES.quizzesRoute());
   };
-
-  /*const stringReverse = string => {
-    return string.split('').reverse().join('');
-  }*/
 
   const addCardInputs = (e) => {
     e.preventDefault();

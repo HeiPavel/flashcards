@@ -19,17 +19,17 @@ export default function App() {
       <nav>
         <ul>
           <li>
-            <NavLink to={ROUTES.topicsRoute()} className="active">
+            <NavLink to={ROUTES.topicsRoute()} className={({isActive}) => isActive ? 'active' : ''}>
               Topics
             </NavLink>
           </li>
           <li>
-            <NavLink to={ROUTES.quizzesRoute()} className="active">
+            <NavLink to={ROUTES.quizzesRoute()} className={({isActive}) => isActive ? 'active' : ''} end>
               Quizzes
             </NavLink>
           </li>
           <li>
-            <NavLink to={ROUTES.newQuizRoute()} className="active">
+            <NavLink to={ROUTES.newQuizRoute()} className={({isActive}) => isActive ? 'active' : ''}>
               New Quiz
             </NavLink>
           </li>

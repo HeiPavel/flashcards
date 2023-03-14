@@ -12,17 +12,11 @@ export default function NewTopicForm() {
   const [icon, setIcon] = useState("");
   const navigate = useNavigate();
 
-  //console.log('name: ', name);
-  //console.log('icon: ', icon);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name.length === 0) {
       return;
     }
-
-    // dispatch your add topic action here
-    //console.log({id: uuidv4(), name: name, icon: icon});
     dispatch(addTopic({id: uuidv4(), name: name, icon: icon}));
     navigate(ROUTES.topicsRoute());
   };
