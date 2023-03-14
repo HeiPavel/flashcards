@@ -54,7 +54,7 @@ export default function NewQuizForm() {
   return (
     <section>
       <h1>Create a new quiz</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="form-section" onSubmit={handleSubmit}>
         <input
           id="quiz-name"
           value={name}
